@@ -110,6 +110,33 @@ a{
     border-bottom: 2px solid #E67E22;
 }
 
+/* -------------------------------- */
+/* ------------ Menu Header ------- */
+/* -------------------------------- */
+
+.section-galery ul{
+    display:flex;
+    flex-wrap: wrap;
+}
+
+.section-galery ul li{
+    width: 25%;
+    overflow: hidden;
+    background-color: black;
+}
+
+.section-galery ul li figure img{
+    width:100%;
+    transform: scale(1.15);
+    transition: transform 0.5s, opacity 0.5s;
+    opacity: 0.7;
+}
+
+.section-galery ul li figure img:hover{
+    transform: scale(1.05);
+    opacity: 1;
+}
+
 
 @media only screen and (max-width: 800px){
     .main-nav{
@@ -119,6 +146,10 @@ a{
     h1{
         font-size: 130%;
     }
+
+    .section-galery ul li{
+        width: 50%;
+    }
 }
 
 @media only screen and (max-width: 640px){
@@ -127,6 +158,7 @@ a{
         /* flex-direction: column; */
         text-align: center;
         /* align-items: center; */
+        margin-top: 2%;
     }
 
     h1{
@@ -141,4 +173,14 @@ a{
     .btn:link, .btn:visited{
         padding: 5px 20px;
     }
+
+    .section-galery ul li{
+        width: 100%;
+    }
+
+    .section-galery ul li figure img{
+        opacity: 1;
+    }
 }
+
+
