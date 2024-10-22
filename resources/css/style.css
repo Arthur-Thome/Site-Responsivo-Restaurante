@@ -110,8 +110,9 @@ h1{
 }
 
 .mobile-nav{
+    color: #FFF;
+    font-size: 200%;
     display: none;
-
 }
 
  /* ------------------------------- */
