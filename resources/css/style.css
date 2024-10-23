@@ -79,8 +79,11 @@ h1{
     flex-wrap: wrap;
     padding: 15px 10px;
     padding-left: 30px;
+    /* Sticky navigation - 
+    gruda o menu no topo da tela */
     /* position: fixed;
     top: 0; */
+    /* z-index: 9999; */
 }
 
 .logo{
@@ -109,16 +112,19 @@ h1{
     border-bottom: 2px solid #E67E22;
 }
 
-.mobile-nav{
+.nav-icon{
     color: #FFF;
     font-size: 200%;
-    display: none;
 }
 
+.mobile-nav:visited,
+.mobile-nav:link{
+    /* Não mostra o elemento */
+    display: none;
+}
  /* ------------------------------- */
 /*------ Seção de Informações ------*/
 /* --------------------------------- */
-
 .section-information{
     padding: 80px 0;
 }
@@ -324,17 +330,22 @@ footer p{
 
 @media only screen and (max-width: 640px){
     .main-nav ul{
+        /* display: none; */
         flex-direction: column;
         align-items: center;
-        display: none;
-    }
+      }
 
     .main-nav{
-        justify-content: space-around;
+        justify-content: space-between;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        height: 200px;
     }
 
-    .mobile-nav{
+    .mobile-nav:visited,
+    .mobile-nav:link{
         display: block;
+        align-self: flex-start;
     }
 
     h1{
@@ -351,7 +362,6 @@ footer p{
     .section-galery ul li{
         width: 100%;
     }
-
     .section-galery ul li figure img{
         opacity: 1;
     }
